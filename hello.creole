@@ -1,0 +1,6 @@
+<!-- Creole -->
+= Hello World =
+
+**Hello, World!**
+
+This is a Creole document.

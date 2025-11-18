@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <message>Hello, World!</message>
+    <greeting name="XML">
+        <text>Hello from XML!</text>
+    </greeting>
+</root>

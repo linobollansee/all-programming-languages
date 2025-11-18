@@ -1,0 +1,17 @@
+// Scilla (Zilliqa smart contract)
+scilla_version 0
+
+library HelloWorld
+
+let one_msg = 
+  fun (msg : Message) => 
+    let nil_msg = Nil {Message} in
+    Cons {Message} msg nil_msg
+
+contract HelloWorld()
+
+transition SayHello()
+  msg = {_tag : ""; _recipient : _sender; _amount : Uint128 0};
+  msgs = one_msg msg;
+  send msgs
+end

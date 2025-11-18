@@ -1,0 +1,6 @@
+// Luna (visual programming language)
+def main:
+    print "Hello, World!"
+
+def greet name:
+    "Hello, " + name + "!"

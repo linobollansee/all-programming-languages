@@ -1,0 +1,10 @@
+// Esterel (synchronous reactive)
+module HelloWorld:
+input I;
+output O;
+
+every I do
+    emit O
+end every
+
+end module

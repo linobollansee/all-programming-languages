@@ -1,0 +1,6 @@
+// Miranda
+main :: [sys_message]
+main = [Stdout "Hello, World!\n"]
+
+greet :: [char] -> [char]
+greet name = "Hello, " ++ name ++ "!"

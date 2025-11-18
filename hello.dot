@@ -1,0 +1,5 @@
+// Graphviz DOT
+digraph HelloWorld {
+  Hello -> World;
+  Hello [label="Hello, World!"];
+}

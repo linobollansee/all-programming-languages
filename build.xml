@@ -1,0 +1,8 @@
+// Ant build.xml
+<?xml version="1.0"?>
+<project name="HelloWorld" default="build">
+    <target name="build">
+        <echo message="Hello, World!"/>
+        <javac srcdir="src" destdir="build"/>
+    </target>
+</project>

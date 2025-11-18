@@ -1,0 +1,5 @@
+// Picat
+main =>
+    println("Hello, World!").
+
+greet(Name) = "Hello, " ++ Name ++ "!".

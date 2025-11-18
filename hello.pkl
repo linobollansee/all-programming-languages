@@ -1,0 +1,6 @@
+// Pkl (configuration language)
+module hello
+
+message: String = "Hello, World!"
+
+function greet(name: String): String = "Hello, \(name)!"

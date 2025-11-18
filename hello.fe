@@ -1,0 +1,6 @@
+// Fe (Ethereum language)
+contract HelloWorld {
+    pub fn greet(self) -> String<100> {
+        return String("Hello, World!")
+    }
+}

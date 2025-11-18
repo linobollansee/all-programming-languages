@@ -1,0 +1,5 @@
+// Hope
+dec greet : list(char) -> list(char);
+--- greet(name) <= "Hello, " <> name <> "!";
+
+main <= write("Hello, World!");

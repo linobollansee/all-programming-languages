@@ -1,0 +1,4 @@
+! Inform 6
+[ Main;
+  print "Hello, World!^";
+];

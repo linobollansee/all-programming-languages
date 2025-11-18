@@ -1,0 +1,11 @@
+// Effekt
+def hello(): Unit = 
+  println("Hello, World!")
+
+def greet(name: String): Unit =
+  println("Hello, " ++ name ++ "!")
+
+def main() = {
+  hello();
+  greet("Effekt")
+}

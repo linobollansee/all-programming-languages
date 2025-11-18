@@ -1,0 +1,5 @@
+// Frege (Haskell for JVM)
+module Hello where
+
+main :: IO ()
+main = println "Hello, World!"

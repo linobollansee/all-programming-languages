@@ -1,0 +1,8 @@
+// Cecil
+object hello_world() {
+  out.write_line("Hello, World!");
+}
+
+method greet(name: string): string {
+  "Hello, " + name + "!"
+}

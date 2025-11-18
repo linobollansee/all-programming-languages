@@ -1,0 +1,6 @@
+<!-- MediaWiki -->
+= Hello World =
+
+'''Hello, World!'''
+
+This is a MediaWiki document.

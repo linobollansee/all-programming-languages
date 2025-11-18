@@ -1,0 +1,8 @@
+// ChaiScript
+print("Hello, World!");
+
+def greet(name) {
+    return "Hello, " + name + "!";
+}
+
+print(greet("ChaiScript"));

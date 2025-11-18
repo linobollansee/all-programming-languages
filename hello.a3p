@@ -1,0 +1,5 @@
+// Alice (3D programming)
+world.my first method
+  Do together
+    camera say "Hello, World!" duration 2 seconds
+  Do in order

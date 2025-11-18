@@ -1,0 +1,4 @@
+// Constraint Handling Rules
+:- chr_constraint hello/0.
+
+hello ==> write('Hello, World!'), nl.

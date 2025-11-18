@@ -1,0 +1,9 @@
+// Why3 (verification platform)
+module HelloWorld
+  use int.Int
+  use io.StdIO
+  
+  let main () : unit
+    ensures { true }
+  = print_string "Hello, World!\n"
+end

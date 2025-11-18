@@ -1,0 +1,14 @@
+// SYCL
+#include <CL/sycl.hpp>
+#include <iostream>
+
+int main() {
+    sycl::queue q;
+    q.submit([&](sycl::handler& h) {
+        sycl::stream out(1024, 256, h);
+        h.single_task([=]() {
+            out << "Hello, World!" << sycl::endl;
+        });
+    }).wait();
+    return 0;
+}

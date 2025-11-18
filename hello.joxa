@@ -1,0 +1,9 @@
+// Joxa
+(ns hello
+  (use (io :only (format/2))))
+
+(defn+ hello ()
+  (format "Hello, World!~n" []))
+
+(defn+ greet (name)
+  (format "Hello, ~s!~n" [name]))

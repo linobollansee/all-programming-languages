@@ -1,0 +1,8 @@
+// Chapel
+writeln("Hello, World!");
+
+proc greet(name: string) {
+    writeln("Hello, ", name, "!");
+}
+
+greet("Chapel");

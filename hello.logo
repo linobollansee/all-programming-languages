@@ -1,0 +1,6 @@
+// Logo
+PRINT [Hello, World!]
+
+TO GREET :NAME
+  PRINT [Hello] :NAME [!]
+END

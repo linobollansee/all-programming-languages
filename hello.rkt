@@ -1,0 +1,8 @@
+#lang racket
+
+(displayln "Hello, World!")
+
+(define (greet name)
+  (string-append "Hello, " name "!"))
+
+(displayln (greet "Racket"))

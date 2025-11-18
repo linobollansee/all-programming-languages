@@ -1,0 +1,20 @@
+!! TADS 3
+#charset "us-ascii"
+#include <adv3.h>
+#include <en_us.h>
+
+gameMain: GameMainDef
+    initialPlayerChar = me
+;
+
+versionInfo: GameID
+    name = 'Hello World'
+    byline = 'by Author'
+;
+
+startRoom: Room 'Starting Location'
+    "Hello, World!"
+;
+
++ me: Actor
+;

@@ -1,0 +1,6 @@
+// Unison
+hello : Text
+hello = "Hello, World!"
+
+greet : Text -> Text
+greet name = "Hello, " ++ name ++ "!"

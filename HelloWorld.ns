@@ -1,0 +1,12 @@
+// Newspeak
+class HelloWorld = (
+| |
+) (
+  public hello = (
+    'Hello, World!' println.
+  )
+  
+  public greet: name = (
+    ^ 'Hello, ', name, '!'
+  )
+)

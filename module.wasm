@@ -1,0 +1,4 @@
+; WebAssembly binary module
+; Real .wasm files are binary and cannot be represented as text
+; This is just a placeholder
+; Use .wat (WebAssembly Text) format for readable WebAssembly code

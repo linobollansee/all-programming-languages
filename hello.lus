@@ -1,0 +1,5 @@
+// Lustre (dataflow language)
+node hello() returns (output: bool);
+let
+    output = true;
+tel

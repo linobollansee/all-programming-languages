@@ -1,0 +1,6 @@
+echo "Hello, World!"
+
+proc greet(name: string): string =
+  "Hello, " & name & "!"
+
+echo greet("Nim")

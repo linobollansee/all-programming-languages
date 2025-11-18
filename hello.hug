@@ -1,0 +1,5 @@
+## Hugo
+routine main
+{
+    print "Hello, World!"
+}

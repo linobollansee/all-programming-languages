@@ -1,0 +1,13 @@
+// Teal (Algorand smart contract)
+#pragma version 8
+txn ApplicationID
+int 0
+==
+bnz main_l2
+int 1
+return
+main_l2:
+byte "Hello, World!"
+log
+int 1
+return

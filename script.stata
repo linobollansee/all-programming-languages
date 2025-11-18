@@ -1,0 +1,9 @@
+* Stata Script
+display "Hello, World!"
+
+program define greet
+    args name
+    display "Hello, `name'!"
+end
+
+greet Stata

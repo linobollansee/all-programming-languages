@@ -1,0 +1,7 @@
+// Céu (synchronous programming)
+output void OUT;
+
+par do
+    await 1s;
+    _printf("Hello, World!\n");
+end

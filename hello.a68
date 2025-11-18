@@ -1,0 +1,4 @@
+// Algol 68
+BEGIN
+  print(("Hello, World!", newline))
+END

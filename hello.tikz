@@ -1,0 +1,8 @@
+% PGF/TikZ
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+  \node at (0,0) {Hello, World!};
+\end{tikzpicture}
+\end{document}

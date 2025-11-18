@@ -1,0 +1,8 @@
+// E (capability-secure language)
+println("Hello, World!")
+
+def greet(name) {
+    return `Hello, $name!`
+}
+
+println(greet("E"))

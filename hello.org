@@ -1,0 +1,6 @@
+<!-- Org Mode -->
+#+TITLE: Hello World
+
+* Hello, World!
+
+This is an *Org Mode* document.

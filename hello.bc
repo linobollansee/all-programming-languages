@@ -1,0 +1,6 @@
+/* bc - arbitrary precision calculator */
+print "Hello, World!\n"
+
+define greet(name) {
+    print "Hello, ", name, "!\n"
+}

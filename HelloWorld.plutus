@@ -1,0 +1,15 @@
+// Plutus (Cardano smart contract)
+{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE TemplateHaskell #-}
+
+module HelloWorld where
+
+import PlutusTx
+import PlutusTx.Prelude
+
+{-# INLINABLE hello #-}
+hello :: BuiltinByteString
+hello = "Hello, World!"
+
+helloCompiled :: CompiledCode BuiltinByteString
+helloCompiled = $$(compile [|| hello ||])

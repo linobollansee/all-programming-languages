@@ -1,0 +1,14 @@
+{
+  "message": "Hello, World!",
+  "language": "JSON",
+  "version": "1.0.0",
+  "data": {
+    "greeting": "Hello",
+    "target": "World"
+  },
+  "items": [
+    "item1",
+    "item2",
+    "item3"
+  ]
+}

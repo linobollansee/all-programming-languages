@@ -1,0 +1,8 @@
+// Aspectc++
+#include <iostream>
+
+aspect HelloWorld {
+    advice execution("int main(...)") : before() {
+        std::cout << "Hello, World!" << std::endl;
+    }
+};

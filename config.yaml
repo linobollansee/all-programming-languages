@@ -1,0 +1,14 @@
+name: hello-world
+version: 1.0.0
+
+config:
+  message: "Hello, World!"
+  enabled: true
+  
+servers:
+  - name: server1
+    host: localhost
+    port: 8080
+  - name: server2
+    host: example.com
+    port: 443

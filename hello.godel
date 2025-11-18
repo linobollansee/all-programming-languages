@@ -1,0 +1,5 @@
+// Gödel
+MAIN <- Writeln("Hello, World!").
+
+Greet(name, result) <-
+    result = "Hello, " ++ name ++ "!".
