@@ -3,10 +3,614 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <meta name="description" content="Comprehensive HTML5 demonstration showcasing semantic elements, forms, media, and accessibility features">
+    <meta name="keywords" content="HTML5, semantic HTML, web development, accessibility">
+    <meta name="author" content="Web Developer">
+    <meta name="theme-color" content="#4A90E2">
+    
+    <!-- Open Graph meta tags for social media -->
+    <meta property="og:title" content="HTML5 Feature Showcase">
+    <meta property="og:description" content="Modern HTML5 with semantic elements and best practices">
+    <meta property="og:type" content="website">
+    
+    <title>HTML5 Feature Showcase - Modern Web Development</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
+    
+    <style>
+        /* Modern CSS with CSS Grid and Flexbox */
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #50C878;
+            --text-color: #333;
+            --bg-color: #f5f5f5;
+            --card-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--bg-color);
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--card-shadow);
+        }
+        
+        nav {
+            background: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            box-shadow: var(--card-shadow);
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+        }
+        
+        h1, h2, h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .card {
+            padding: 1.5rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        form {
+            display: grid;
+            gap: 1rem;
+            max-width: 600px;
+        }
+        
+        label {
+            font-weight: 500;
+        }
+        
+        input, textarea, select {
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        button {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: var(--secondary-color);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        tr:hover {
+            background: #f9f9f9;
+        }
+        
+        figure {
+            margin: 1.5rem 0;
+        }
+        
+        figcaption {
+            font-style: italic;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: #e0e0e0;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            transition: width 0.3s;
+        }
+        
+        details {
+            margin: 1rem 0;
+            padding: 1rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 8px;
+        }
+        
+        summary {
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        aside {
+            background: #fff3cd;
+            padding: 1rem;
+            border-left: 4px solid #ffc107;
+            margin: 1rem 0;
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>Welcome to HTML.</p>
+    <!-- Semantic header with navigation -->
+    <header>
+        <h1>🌐 HTML5 Feature Showcase</h1>
+        <p>Comprehensive demonstration of modern HTML5 semantic elements and best practices</p>
+    </header>
+    
+    <!-- Sticky navigation with semantic nav element -->
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="#semantic">Semantic HTML</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#data">Data Display</a></li>
+            <li><a href="#interactive">Interactive</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Main content area -->
+    <main>
+        <!-- Article with semantic sections -->
+        <article>
+            <section id="semantic">
+                <h2>Semantic HTML Elements</h2>
+                <p>HTML5 introduced semantic elements that clearly describe their meaning to both browsers and developers.</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>📄 Article</h3>
+                        <p>Self-contained composition that can be independently distributed or reused.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>📝 Section</h3>
+                        <p>Thematic grouping of content, typically with a heading.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>🔗 Nav</h3>
+                        <p>Navigation links for the document or site.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>↔️ Aside</h3>
+                        <p>Content tangentially related to the main content.</p>
+                    </div>
+                </div>
+                
+                <aside>
+                    <strong>💡 Best Practice:</strong> Use semantic HTML for better accessibility, SEO, and maintainability.
+                </aside>
+            </section>
+            
+            <section id="forms">
+                <h2>Modern HTML5 Forms</h2>
+                <p>HTML5 provides extensive form controls with built-in validation.</p>
+                
+                <form action="#" method="post" novalidate>
+                    <fieldset>
+                        <legend>Contact Information</legend>
+                        
+                        <label for="name">
+                            Name: <abbr title="required" aria-label="required">*</abbr>
+                        </label>
+                        <input type="text" id="name" name="name" required 
+                               placeholder="Enter your full name" 
+                               autocomplete="name"
+                               minlength="2" maxlength="100">
+                        
+                        <label for="email">
+                            Email: <abbr title="required" aria-label="required">*</abbr>
+                        </label>
+                        <input type="email" id="email" name="email" required 
+                               placeholder="you@example.com"
+                               autocomplete="email">
+                        
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" 
+                               placeholder="+1-555-0123"
+                               pattern="[+]?[0-9\-\s()]+"
+                               autocomplete="tel">
+                        
+                        <label for="website">Website:</label>
+                        <input type="url" id="website" name="website" 
+                               placeholder="https://example.com">
+                        
+                        <label for="birthdate">Birth Date:</label>
+                        <input type="date" id="birthdate" name="birthdate" 
+                               min="1900-01-01" max="2025-12-31">
+                        
+                        <label for="time">Preferred Contact Time:</label>
+                        <input type="time" id="time" name="time">
+                        
+                        <label for="color">Favorite Color:</label>
+                        <input type="color" id="color" name="color" value="#4A90E2">
+                        
+                        <label for="range">Interest Level (1-10):</label>
+                        <input type="range" id="range" name="range" 
+                               min="1" max="10" value="5" 
+                               oninput="this.nextElementSibling.textContent = this.value">
+                        <output>5</output>
+                        
+                        <label for="country">Country:</label>
+                        <select id="country" name="country" required>
+                            <option value="">-- Select Country --</option>
+                            <option value="us">United States</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="ca">Canada</option>
+                            <option value="au">Australia</option>
+                        </select>
+                        
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" 
+                                  placeholder="Enter your message here..."
+                                  maxlength="500"></textarea>
+                        
+                        <label>
+                            <input type="checkbox" name="newsletter" value="yes">
+                            Subscribe to newsletter
+                        </label>
+                        
+                        <fieldset>
+                            <legend>Contact Method</legend>
+                            <label>
+                                <input type="radio" name="contact-method" value="email" checked>
+                                Email
+                            </label>
+                            <label>
+                                <input type="radio" name="contact-method" value="phone">
+                                Phone
+                            </label>
+                        </fieldset>
+                        
+                        <button type="submit">Submit Form</button>
+                    </fieldset>
+                </form>
+            </section>
+            
+            <section id="media">
+                <h2>Media Elements</h2>
+                
+                <h3>SVG Graphics</h3>
+                <figure>
+                    <svg width="300" height="150" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#50C878;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="300" height="150" fill="url(#grad1)" rx="10"/>
+                        <text x="150" y="80" text-anchor="middle" fill="white" 
+                              font-size="24" font-weight="bold">SVG Graphics</text>
+                    </svg>
+                    <figcaption>Figure 1: Inline SVG with gradient</figcaption>
+                </figure>
+                
+                <h3>Canvas for Dynamic Graphics</h3>
+                <canvas id="myCanvas" width="400" height="200" 
+                        style="border:2px solid var(--primary-color); border-radius: 8px;">
+                    Your browser does not support the canvas element.
+                </canvas>
+                
+                <h3>Audio Element</h3>
+                <audio controls preload="metadata">
+                    <source src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                
+                <h3>Video with Multiple Sources</h3>
+                <video controls width="400" preload="metadata" poster="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='225'><rect width='400' height='225' fill='%234A90E2'/><text x='50%' y='50%' text-anchor='middle' fill='white' font-size='24'>Video Placeholder</text></svg>">
+                    <source src="video.mp4" type="video/mp4">
+                    <source src="video.webm" type="video/webm">
+                    <track kind="subtitles" src="subtitles_en.vtt" srclang="en" label="English">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+            
+            <section id="data">
+                <h2>Data Display Elements</h2>
+                
+                <h3>Data Table with Semantic Markup</h3>
+                <table>
+                    <caption>Web Technologies Comparison</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Technology</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Year</th>
+                            <th scope="col">Usage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HTML5</td>
+                            <td>Markup</td>
+                            <td>2014</td>
+                            <td><meter value="0.95" min="0" max="1">95%</meter></td>
+                        </tr>
+                        <tr>
+                            <td>CSS3</td>
+                            <td>Styling</td>
+                            <td>2011</td>
+                            <td><meter value="0.93" min="0" max="1">93%</meter></td>
+                        </tr>
+                        <tr>
+                            <td>JavaScript</td>
+                            <td>Programming</td>
+                            <td>1995</td>
+                            <td><meter value="0.98" min="0" max="1">98%</meter></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4"><em>Data as of 2025</em></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                
+                <h3>Definition List</h3>
+                <dl>
+                    <dt>HTML</dt>
+                    <dd>HyperText Markup Language - the standard markup language for web pages</dd>
+                    
+                    <dt>CSS</dt>
+                    <dd>Cascading Style Sheets - describes how HTML elements are displayed</dd>
+                    
+                    <dt>JavaScript</dt>
+                    <dd>Programming language that enables interactive web pages</dd>
+                </dl>
+                
+                <h3>Progress Indicators</h3>
+                <p>Project Progress:</p>
+                <progress value="75" max="100">75%</progress>
+                
+                <p>Loading Status:</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 60%"></div>
+                </div>
+                
+                <h3>Time and Data Elements</h3>
+                <p>Published: <time datetime="2025-11-28T10:00:00">November 28, 2025 at 10:00 AM</time></p>
+                <p>Price: <data value="49.99">$49.99</data></p>
+                <p>Mathematical expression: <var>E</var> = <var>mc</var><sup>2</sup></p>
+                <p>Code snippet: <code>const result = array.map(x => x * 2);</code></p>
+                <p>Keyboard shortcut: Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save</p>
+                <p>Sample output: <samp>Error 404: Page not found</samp></p>
+            </section>
+            
+            <section id="interactive">
+                <h2>Interactive Elements</h2>
+                
+                <h3>Details and Summary</h3>
+                <details>
+                    <summary>What is HTML5?</summary>
+                    <p>HTML5 is the latest version of Hypertext Markup Language, introducing new semantic elements, form controls, multimedia support, and APIs for building modern web applications.</p>
+                </details>
+                
+                <details open>
+                    <summary>Key HTML5 Features</summary>
+                    <ul>
+                        <li>Semantic elements (<code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>)</li>
+                        <li>Native audio and video support</li>
+                        <li>Canvas and SVG for graphics</li>
+                        <li>Enhanced form controls and validation</li>
+                        <li>Local storage and offline capabilities</li>
+                        <li>Geolocation API</li>
+                        <li>Web Workers for background processing</li>
+                    </ul>
+                </details>
+                
+                <h3>Dialog Element</h3>
+                <dialog id="myDialog" style="border: 2px solid var(--primary-color); border-radius: 8px; padding: 2rem;">
+                    <h3>Modal Dialog</h3>
+                    <p>This is a native HTML dialog element.</p>
+                    <button onclick="document.getElementById('myDialog').close()">Close</button>
+                </dialog>
+                <button onclick="document.getElementById('myDialog').showModal()">Open Dialog</button>
+                
+                <h3>Content Editable</h3>
+                <div contenteditable="true" style="border: 2px dashed var(--primary-color); padding: 1rem; border-radius: 8px; min-height: 100px;">
+                    <p>This content is editable! Click here and start typing to modify this text directly in the browser.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Accessibility Features</h2>
+                <p>HTML5 emphasizes web accessibility with ARIA attributes and semantic markup:</p>
+                
+                <div role="alert" aria-live="polite" style="background: #d4edda; padding: 1rem; border-radius: 4px; border-left: 4px solid #28a745;">
+                    <strong>Success!</strong> This is an accessible alert message using ARIA roles.
+                </div>
+                
+                <h3>Properly Labeled Form</h3>
+                <form>
+                    <label for="search-input">Search:</label>
+                    <input type="search" 
+                           id="search-input" 
+                           name="search" 
+                           placeholder="Search website..."
+                           aria-describedby="search-help">
+                    <small id="search-help">Enter keywords to search the site</small>
+                </form>
+                
+                <h3>Semantic Text Elements</h3>
+                <p>This text has <strong>strong importance</strong> and <em>emphasis</em>.</p>
+                <p>This is <mark>highlighted text</mark> for reference.</p>
+                <p>This is <del>deleted text</del> and <ins>inserted text</ins>.</p>
+                <p>This is <small>small print</small> and <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                <blockquote cite="https://www.w3.org/standards/">
+                    <p>"The Web is for everyone, and its evolution depends on everyone's participation."</p>
+                    <footer>— <cite>W3C</cite></footer>
+                </blockquote>
+            </section>
+        </article>
+    </main>
+    
+    <!-- Footer with contact and copyright info -->
+    <footer>
+        <address>
+            Contact: <a href="mailto:info@example.com" style="color: #50C878;">info@example.com</a>
+        </address>
+        <p>&copy; 2025 HTML5 Showcase. Built with semantic HTML5 and modern best practices.</p>
+        <p>
+            <small>
+                <a href="#" style="color: white;">Privacy Policy</a> | 
+                <a href="#" style="color: white;">Terms of Service</a> | 
+                <a href="#" style="color: white;">Accessibility Statement</a>
+            </small>
+        </p>
+    </footer>
+    
+    <!-- JavaScript for canvas demo -->
+    <script>
+        // Canvas drawing demonstration
+        const canvas = document.getElementById('myCanvas');
+        if (canvas && canvas.getContext) {
+            const ctx = canvas.getContext('2d');
+            
+            // Gradient background
+            const gradient = ctx.createLinearGradient(0, 0, 400, 200);
+            gradient.addColorStop(0, '#4A90E2');
+            gradient.addColorStop(1, '#50C878');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 400, 200);
+            
+            // Draw shapes
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+            ctx.beginPath();
+            ctx.arc(100, 100, 40, 0, Math.PI * 2);
+            ctx.fill();
+            
+            ctx.fillRect(180, 60, 80, 80);
+            
+            ctx.beginPath();
+            ctx.moveTo(330, 140);
+            ctx.lineTo(370, 60);
+            ctx.lineTo(290, 60);
+            ctx.closePath();
+            ctx.fill();
+            
+            // Text
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 20px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('HTML5 Canvas', 200, 190);
+        }
+        
+        // Form validation example
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form validation passed! This is a demo form.');
+        });
+    </script>
 </body>
 </html>
